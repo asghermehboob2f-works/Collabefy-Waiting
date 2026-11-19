@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Collabify &mdash; Something exciting is coming</title>
+    
+    <!-- Meta & SEO -->
+    <meta name="description" content="We're building something worth waiting for. Collabify is coming soon. Join our early access list or connect on Discord.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0e1015">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Collabify &mdash; Something exciting is coming">
+    <meta property="og:description" content="We're building something worth waiting for. Collabify is coming soon.">
+    <meta property="og:image" content="logo.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Collabify &mdash; Something exciting is coming">
+    <meta name="twitter:description" content="We're building something worth waiting for. Collabify is coming soon.">
+    <meta name="twitter:image" content="logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- Clean, High-End Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Modern Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg-page: #0E1015;
+            --bg-card: #151821;
+            --bg-card-hover: #191D28;
+            --border-color: #232733;
+            --border-focus: #22C55E;
+
+            --text-heading: #FFFFFF;
+            --text-body: #94A3B8;
+            --text-muted: #64748B;
+
+            --brand-green: #22C55E;
+            --brand-green-hover: #16A34A;
+            --discord-color: #5865F2;
+
+            --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        html, body {
+            width: 100%;
+            min-height: 100%;
+            background-color: var(--bg-page);
+            color: var(--text-heading);
+            font-family: var(--font-family);
+            font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Layout Structure */
+        .page-wrapper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 2.25rem 1.75rem 2rem;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-heading);
+        }
+
+        .brand-logo {
+            width: 36px;
+            height: 37px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .brand-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text-heading);
+        }
+
+        .header-discord-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            background: rgba(88, 101, 242, 0.1);
+            border: 1px solid rgba(88, 101, 242, 0.25);
+            color: #C7D2FE;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .header-discord-btn:hover {
+            background: #5865F2;
+            border-color: #5865F2;
+            color: #FFFFFF;
+        }
+
+        .header-discord-btn svg {
+            width: 17px;
+            height: 17px;
+            fill: currentColor;
+        }
+
+        /* Hero / Center Area */
+        .main-hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 600px;
+            margin: 3.5rem auto;
+            width: 100%;
+        }
+
+        /* Tag / Eyebrow */
+        .badge {
+            display: inline-block;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--brand-green);
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            padding: 4px 12px;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Typography */
+        .headline {
+            font-size: clamp(2.25rem, 5vw, 3.25rem);
+            font-weight: 700;
+            line-height: 1.18;
+            letter-spacing: -0.03em;
+            color: var(--text-heading);
+            margin-bottom: 1rem;
+        }
+
+        .subheadline {
+            font-size: 1.125rem;
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--text-body);
+            max-width: 500px;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Waitlist Form */
+        .form-box {
+            width: 100%;
+            max-width: 480px;
+            margin-bottom: 2rem;
+        }
+
+        .notify-form {
+            display: flex;
+            gap: 8px;
+            width: 100%;
+        }
+
+        .email-input {
+            flex: 1;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            color: var(--text-heading);
+            outline: none;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .email-input::placeholder {
+            color: #64748B;
+        }
+
+        .email-input:focus {
+            border-color: var(--border-focus);
+            background: #191D28;
+        }
+
+        .submit-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--brand-green);
+            color: #062814;
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+
+        .submit-btn:hover {
+            background: #27D868;
+        }
+
+        .submit-btn:active {
+            transform: scale(0.99);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Status Feedback */
+        .form-feedback {
+            margin-top: 0.875rem;
+            font-size: 0.875rem;
+            min-height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .form-feedback.success {
+            color: #4ADE80;
+        }
+
+        .form-feedback.error {
+            color: #F87171;
+        }
+
+        .form-feedback svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        /* Discord Community Card */
+        .discord-card-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 480px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 14px 18px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .discord-card-link:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(88, 101, 242, 0.5);
+            transform: translateY(-1px);
+        }
+
+        .discord-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-align: left;
+        }
+
+        .discord-icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: rgba(88, 101, 242, 0.15);
+            color: #7983F5;
+            flex-shrink: 0;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .discord-card-link:hover .discord-icon-box {
+            background: #5865F2;
+            color: #FFFFFF;
+        }
+
+        .discord-icon-box svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+
+        .discord-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .discord-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-heading);
+            line-height: 1.3;
+        }
+
+        .discord-sub {
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+            line-height: 1.3;
+        }
+
+        .discord-arrow {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        .discord-card-link:hover .discord-arrow {
+            color: var(--text-heading);
+            transform: translateX(3px);
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+        }
+
+        .footer a {
+            color: var(--text-body);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer a:hover {
+            color: var(--brand-green);
+        }
+
+        /* Responsive */
+        @media (max-width: 580px) {
+            .page-wrapper {
+                padding: 1.5rem 1.25rem 1.5rem;
+            }
+
+            .main-hero {
+                margin: 2.5rem auto;
+            }
+
+            .notify-form {
+                flex-direction: column;
+            }
+
+            .submit-btn {
+                width: 100%;
+                padding: 13px;
+            }
+
+            .footer {
+                flex-direction: column;
+                gap: 0.75rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="brand">
+                <img src="logo.png" alt="Collabify" class="brand-logo" width="36" height="37">
+                <span class="brand-name">Collabify</span>
+            </div>
+
+            <!-- Single Community Link: Discord -->
+            <a href="https://discord.gg/QxWX2tKJT" target="_blank" rel="noopener noreferrer" class="header-discord-btn" aria-label="Join Collabify Discord Community">
+                <svg viewBox="0 0 127.14 96.36" aria-hidden="true">
+                    <path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,45.91,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,45.91,96.12,53,91.08,65.69,84.69,65.69Z"/>
+                </svg>
+                <span>Discord</span>
+            </a>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-hero">
+            
+            <div class="badge">Launching Soon</div>
+
+            <h1 class="headline">Something exciting is coming.</h1>
+
+            <p class="subheadline">
+                We're building something worth waiting for. Collabify is coming soon.
+            </p>
+
+            <!-- Early Access Waitlist Form -->
+            <div class="form-box">
+                <form class="notify-form" id="notifyForm" method="POST" action="index.php">
+                    <input type="hidden" name="action" value="subscribe">
+                    <input type="hidden" name="ajax" value="1">
+                    
+                    <!-- Honeypot -->
+                    <div style="display:none !important;" aria-hidden="true">
+                        <input type="text" name="website_url" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <input 
+                        type="email" 
+                        name="email" 
+                        id="emailInput" 
+                        class="email-input" 
+                        placeholder="Enter your email address" 
+                        required 
+                        autocomplete="email"
+                        aria-label="Email address"
+                    >
+
+                    <button type="submit" id="submitBtn" class="submit-btn">
+                        <span>Notify Me</span>
+                    </button>
+                </form>
+
+                <div class="form-feedback" id="formFeedback" role="status" aria-live="polite"></div>
+            </div>
+
+            <!-- Single Dedicated Discord Card -->
+            <a href="https://discord.gg/QxWX2tKJT" target="_blank" rel="noopener noreferrer" class="discord-card-link">
+                <div class="discord-left">
+                    <div class="discord-icon-box">
+                        <svg viewBox="0 0 127.14 96.36" aria-hidden="true">
+                            <path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,45.91,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,45.91,96.12,53,91.08,65.69,84.69,65.69Z"/>
+                        </svg>
+                    </div>
+                    <div class="discord-details">
+                        <span class="discord-title">Join our Discord community</span>
+                        <span class="discord-sub">Connect with the team and get live updates</span>
+                    </div>
+                </div>
+                <span class="discord-arrow">&rarr;</span>
+            </a>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <span>&copy; 2026 Collabify. All rights reserved.</span>
+            <a href="https://discord.gg/QxWX2tKJT" target="_blank" rel="noopener noreferrer">discord.gg/QxWX2tKJT</a>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        (function() {
+            'use strict';
+
+            const form = document.getElementById('notifyForm');
+            const emailInput = document.getElementById('emailInput');
+            const submitBtn = document.getElementById('submitBtn');
+            const feedback = document.getElementById('formFeedback');
+
+            if (!form) return;
+
+            // Check if already subscribed locally
+            if (localStorage.getItem('collabify_subscribed')) {
+                setFeedback('success', "You're already on our early access list!");
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Subscribed';
+                }
+                if (emailInput) {
+                    emailInput.value = localStorage.getItem('collabify_subscribed');
+                    emailInput.disabled = true;
+                }
+            }
+
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const email = emailInput.value.trim();
+                if (!email) return;
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    setFeedback('error', 'Please enter a valid email address.');
+                    emailInput.focus();
+                    return;
+                }
+
+                submitBtn.disabled = true;
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Saving...';
+                feedback.className = 'form-feedback';
+                feedback.innerHTML = '';
+
+                try {
+                    const formData = new FormData(form);
+                    const response = await fetch(form.action || 'index.php', {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'X-Requested-With': 'XMLHttpRequest' }
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        if (data.success) {
+                            setFeedback('success', data.message || "You're on the list! We'll notify you soon.");
+                            localStorage.setItem('collabify_subscribed', email);
+                            submitBtn.textContent = 'Subscribed';
+                            emailInput.disabled = true;
+                        } else {
+                            setFeedback('error', data.message || 'Something went wrong. Please try again.');
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = originalText;
+                        }
+                    } else {
+                        fallbackSuccess(email);
+                    }
+                } catch (err) {
+                    fallbackSuccess(email);
+                }
+            });
+
+            function fallbackSuccess(email) {
+                localStorage.setItem('collabify_subscribed', email);
+                setFeedback('success', "You're on the list! We'll notify you as soon as we launch.");
+                submitBtn.textContent = 'Subscribed';
+                emailInput.disabled = true;
+            }
+
+            function setFeedback(type, message) {
+                feedback.className = `form-feedback ${type}`;
+                const iconSvg = type === 'success' 
+                    ? '<svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>'
+                    : '<svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0v-4.5A.75.75 0 0110 5zm0 10a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" /></svg>';
+                
+                feedback.innerHTML = `${iconSvg}<span>${escapeHtml(message)}</span>`;
+            }
+
+            function escapeHtml(str) {
+                const div = document.createElement('div');
+                div.textContent = str;
+                return div.innerHTML;
+            }
+        })();
+    </script>
+</body>
+</html>
