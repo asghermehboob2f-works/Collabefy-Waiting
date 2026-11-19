@@ -1,6 +1,6 @@
 <?php
 /**
- * Collabify — Coming Soon Landing Page
+ * Collabefy — Coming Soon Landing Page
  * 
  * Clean, minimal, professional single-file landing page.
  * Pure craftsmanship, zero generic AI bloat.
@@ -87,23 +87,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Collabify &mdash; Something exciting is coming</title>
+    <title>Collabefy &mdash; Something exciting is coming</title>
     
     <!-- Meta & SEO -->
-    <meta name="description" content="We're building something worth waiting for. Collabify is coming soon. Join our early access list or connect on Discord.">
+    <meta name="description" content="We're building something worth waiting for. Collabefy is coming soon. Join our early access list or connect on Discord.">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0e1015">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Collabify &mdash; Something exciting is coming">
-    <meta property="og:description" content="We're building something worth waiting for. Collabify is coming soon.">
+    <meta property="og:title" content="Collabefy &mdash; Something exciting is coming">
+    <meta property="og:description" content="We're building something worth waiting for. Collabefy is coming soon.">
     <meta property="og:image" content="logo.png">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Collabify &mdash; Something exciting is coming">
-    <meta name="twitter:description" content="We're building something worth waiting for. Collabify is coming soon.">
+    <meta name="twitter:title" content="Collabefy &mdash; Something exciting is coming">
+    <meta name="twitter:description" content="We're building something worth waiting for. Collabefy is coming soon.">
     <meta name="twitter:image" content="logo.png">
     
     <!-- Favicon -->
@@ -493,12 +493,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
         <!-- Header -->
         <header class="header">
             <div class="brand">
-                <img src="logo.png" alt="Collabify" class="brand-logo" width="36" height="37">
-                <span class="brand-name">Collabify</span>
+                <img src="logo.png" alt="Collabefy" class="brand-logo" width="36" height="37">
+                <span class="brand-name">Collabefy</span>
             </div>
 
             <!-- Single Community Link: Discord -->
-            <a href="https://discord.gg/QxWX2tKJT" target="_blank" rel="noopener noreferrer" class="header-discord-btn" aria-label="Join Collabify Discord Community">
+            <a href="https://discord.gg/QxWX2tKJT" target="_blank" rel="noopener noreferrer" class="header-discord-btn" aria-label="Join Collabefy Discord Community">
                 <svg viewBox="0 0 127.14 96.36" aria-hidden="true">
                     <path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,45.91,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,45.91,96.12,53,91.08,65.69,84.69,65.69Z"/>
                 </svg>
@@ -514,7 +514,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
             <h1 class="headline">Something exciting is coming.</h1>
 
             <p class="subheadline">
-                We're building something worth waiting for. Collabify is coming soon.
+                We're building something worth waiting for. Collabefy is coming soon.
             </p>
 
             <!-- Early Access Waitlist Form -->
@@ -576,7 +576,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
 
         <!-- Footer -->
         <footer class="footer">
-            <span>&copy; <?php echo date('Y'); ?> Collabify. All rights reserved.</span>
+            <span>&copy; <?php echo date('Y'); ?> Collabefy. All rights reserved.</span>
             <a href="https://discord.gg/QxWX2tKJT" target="_blank" rel="noopener noreferrer">discord.gg/QxWX2tKJT</a>
         </footer>
 
@@ -595,14 +595,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
             if (!form) return;
 
             // Check if already subscribed locally
-            if (localStorage.getItem('collabify_subscribed')) {
+            if (localStorage.getItem('collabefy_subscribed')) {
                 setFeedback('success', "You're already on our early access list!");
                 if (submitBtn) {
                     submitBtn.disabled = true;
                     submitBtn.textContent = 'Subscribed';
                 }
                 if (emailInput) {
-                    emailInput.value = localStorage.getItem('collabify_subscribed');
+                    emailInput.value = localStorage.getItem('collabefy_subscribed');
                     emailInput.disabled = true;
                 }
             }
@@ -638,7 +638,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
                         const data = await response.json();
                         if (data.success) {
                             setFeedback('success', data.message || "You're on the list! We'll notify you soon.");
-                            localStorage.setItem('collabify_subscribed', email);
+                            localStorage.setItem('collabefy_subscribed', email);
                             submitBtn.textContent = 'Subscribed';
                             emailInput.disabled = true;
                         } else {
@@ -655,7 +655,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
             });
 
             function fallbackSuccess(email) {
-                localStorage.setItem('collabify_subscribed', email);
+                localStorage.setItem('collabefy_subscribed', email);
                 setFeedback('success', "You're on the list! We'll notify you as soon as we launch.");
                 submitBtn.textContent = 'Subscribed';
                 emailInput.disabled = true;
